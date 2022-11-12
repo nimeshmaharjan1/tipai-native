@@ -4,4 +4,16 @@ import Container from './container';
 import AnimatedBox from './animated-box';
 import Bar from './bar';
 
-export { Box, Text, Container, AnimatedBox, Bar };
+import Touchable, { TouchableOpacity } from './touchable';
+import Pressable from './pressable';
+
+export {
+  Box,
+  Text,
+  Container,
+  AnimatedBox,
+  Bar,
+  Touchable,
+  TouchableOpacity,
+  Pressable,
+};
