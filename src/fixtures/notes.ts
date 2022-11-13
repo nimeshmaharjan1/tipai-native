@@ -19,7 +19,7 @@ const lorem = new LoremIpsum({
 const capitalizeFirstLetter = ([first, ...rest]: string) =>
   first.toLocaleUpperCase() + rest.join('');
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 30; i++) {
   NotesData.push({
     id: shortid.generate(),
     title: capitalizeFirstLetter(
