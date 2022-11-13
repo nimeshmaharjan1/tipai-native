@@ -4,7 +4,7 @@ import { Bar } from '@/atoms';
 
 const HeaderBar: React.FC<any> = ({ children, ...rest }) => {
   return (
-    <AnimatedBox position={'absolute'} top={40} left={0} right={0} {...rest}>
+    <AnimatedBox position={'absolute'} top={6} left={0} right={0} {...rest}>
       <Bar
         mx="lg"
         variant={'headerBar'}

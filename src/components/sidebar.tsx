@@ -2,15 +2,29 @@ import React from 'react';
 import { DrawerContentComponentProps } from '@react-navigation/drawer';
 import { Box, Text } from '@/atoms';
 import { SafeAreaView } from 'react-native';
+import BookList from './book-list';
 
-const Sidebar: React.FC<DrawerContentComponentProps> = () => {
+import Logo from './Logo';
+
+const Sidebar: React.FC<DrawerContentComponentProps> = ({ navigation }) => {
+  const handleBookListItemPress = React.useCallback(() => {
+    navigation.closeDrawer();
+  }, [navigation]);
   return (
     <Box flex={1} bg="$sidebarBackground">
       <SafeAreaView>
-        <Text variant="sidebar" m="lg">
-          Tipai
-        </Text>
+        <Box
+          alignItems={'flex-start'}
+          pl="md"
+          pb="sm"
+          mt="sm"
+          borderBottomColor={'$sidebarSeparator'}
+          borderBottomWidth={1}
+        >
+          <Logo width={128} height={36} color="red"></Logo>
+        </Box>
       </SafeAreaView>
+      <BookList onPressItem={handleBookListItemPress}></BookList>
     </Box>
   );
 };
